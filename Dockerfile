@@ -2,7 +2,7 @@ FROM ruby:3.0.4
 
 WORKDIR /survey-app-rails
 
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client imagemagick libvips
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client imagemagick libvips curl git
 
 COPY Gemfile /survey-app-rails/Gemfile
 COPY Gemfile.lock /survey-app-rails/Gemfile.lock
